@@ -34,8 +34,8 @@ projectappend.forEach(function(value,index){
 }
 
 
-function removecards(boardid){
-   document.getElementById('boardid').innerHTML = '';
+function removecards(){
+   document.getElementById('projectid_'+idname).innerHTML = '';
    
    
 }
@@ -45,6 +45,7 @@ function addBoard(id){
         idname++;
         var list="projectid_" + idname;
         var boardid="board_"+ idname;
+        console.log(list)
    
     var templateBlock = '<section class ="board-block"+id ='+boardid +'>'+
     '<div>'+id.value+'<button onclick="removecards()">Remove Card</button></div>'+
@@ -55,7 +56,9 @@ function addBoard(id){
 
     document.getElementById('boardBlockList').innerHTML += templateBlock;
     project(list);
+    
     document.getElementById('menulist').innerHTML +='<li onClick ="loadMenu('+boardid+')">'+id.value+"</li>";
+  
 }
 
 function loadMenu(element){
