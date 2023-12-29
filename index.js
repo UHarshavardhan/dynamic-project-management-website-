@@ -54,9 +54,9 @@ function addBoard(id){
     '</div>'+
     '</section>'
 
-    document.getElementById('boardBlockList').innerHTML += templateBlock;
+    document.getElement2ById('boardBlockList').innerHTML += templateBlock;
     project(list);
-    
+
     document.getElementById('menulist').innerHTML +='<li onClick ="loadMenu('+boardid+')">'+id.value+"</li>";
   
 }
